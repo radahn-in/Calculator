@@ -4,12 +4,14 @@ const numberBtns = Array.from(document.querySelectorAll('.nmbrBtn'));
 const operatorBtns = Array.from(document.querySelectorAll('.opBtn'));
 const clearBtn = document.querySelector('#clearBtn');
 const equalBtn = document.querySelector('#equalBtn');
+const negateBtn = document.querySelector('#negateBtn');
 
 
 numberBtns.forEach(button => button.addEventListener("click", addToDisplay)); 
 operatorBtns.forEach(button => button.addEventListener("click", addToDisplay));
 equalBtn.addEventListener("click", equals);
 clearBtn.addEventListener("click", clearDisplay);
+negateBtn.addEventListener("click", toggleSign);
 
 
 let operand1 = '';
@@ -58,7 +60,12 @@ function addToDisplay(e){
     lastButtonPushed = button;
 }
 
-
+function toggleSign(){
+    let currentDisplay = displayBox.textContent;
+    if(!isNaN(currentDisplay) && currentDisplay !== ''){
+        displayBox.textContent = Number(currentDisplay)* -1
+    }
+}
 
 
 function equals(){

@@ -56,6 +56,10 @@ button:hover {
     background-color: rgb(169,184,38);
 }
 
+#negateBtn:hover{
+    background-color: rgb(169,184,38);
+}
+
 .nmbrBtn {
     width: 58px;
     height: 50px;
@@ -75,12 +79,21 @@ button:hover {
 }
 
 #equalBtn{
-    width: 180px;
+    width: 120px;
     height: 50px;
     margin-bottom: 10px;
     border: 2px solid black;
     border-radius: 8px;
     background-color: rgb(145,145,153);
+}
+
+#negateBtn{
+    width: 58px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: rgb(145, 145, 153);
 }
 
 #clearBtn{
